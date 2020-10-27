@@ -16,7 +16,11 @@ body {
 
 .header {
   background-color: bisque;
+  background-image: url(https://cdn.pixabay.com/photo/2014/07/28/20/39/dusk-404072_960_720.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
   height: 350px;
+
 }
 
 .header h1 {
