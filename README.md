@@ -1,6 +1,6 @@
 # Todo
 
-- Achtergrondafbeelding header
-- Contactpagina maken
-- Over mij pagina maken
+- Achtergrondafbeelding header (klaar)
+- Contactpagina maken 
+- Over mij pagina maken (klaar)
 - Blog pagina maken

@@ -29,7 +29,7 @@
   <div class="container">
     <a href="/">Home</a>
     <a href="/blog.php">Blog</a>
-    <a href="/about.php">Over ons</a>
+    <a href="/about.php">Over mij</a>
     <a href="/contact.php">Contact</a>
     <div class="clearfix"></div>
   </div>
@@ -43,6 +43,10 @@
 </form>
 
 
-<?php
-  include "include/footer.php";
-?>
+
+<div class="footer">
+  <div class="container">
+    <p>Wij reageren zo snel mogelijk! </p>
+
+  </div>
+</div>

@@ -11,7 +11,7 @@
   <div class="container">
     <a href="/">Home</a>
     <a href="/blog.php">Blog</a>
-    <a href="/about.php">Over ons</a>
+    <a href="/about.php">Over Mij</a>
     <a href="/contact.php">Contact</a>
     <div class="clearfix"></div>
   </div>
