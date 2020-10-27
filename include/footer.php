@@ -7,6 +7,7 @@
       }
       $name = $_POST['name'];
       $age = $_POST['age'];
+      $email = $_POST['email'];
       echo "Welcome $name <br />";
       echo "You are $age years old.";
       
