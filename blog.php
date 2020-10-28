@@ -17,6 +17,24 @@
   </div>
 </div>
 
+<div class="content">
+  <div class="container">
+    <h2>Blog posts</h2>
+    <div class="blog-post">
+      <h3 class="post-title">Post 1</h3>
+      <p class="post-content">Post content 1</p>
+    </div>
+    <div class="blog-post">
+      <h3 class="post-title">Post 2</h3>
+      <p class="post-content">Post content 2</p>
+    </div>
+    <div class="blog-post">
+      <h3 class="post-title">Post 3</h3>
+      <p class="post-content">Post content 3</p>
+    </div>
+  </div>
+</div>
+
 
 
 

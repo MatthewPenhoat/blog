@@ -2,19 +2,23 @@
     include "include/header.php";
     
 
-   if( isset($_POST["name"]) || isset($_POST["age"]) ) {
-      if (preg_match("/[^A-Za-z'-]/",$_POST['name'] )) {
+   if( isset($_POST["name"]) || isset($_POST["voornaam"]) ) {
+      if (preg_match("/[^A-Za-z'-]/",$_POST['achternaam'] )) {
          if( isset($_Post["email"]) || isset($_Post["email"]))
+         if( isset($_Post["onderwerp"]) || isset($_Post["onderwerp"]))
+         if( isset($_Post["bericht"]) || isset($_Post["bericht"]))
          die ("invalid name and name should be alpha");
    
       }
-      $name = $_POST['name'];
-      $age = $_POST['age'];
+      $voornaam = $_POST['voornaam'];
+      $achternaam = $_POST['achternaam'];
       $email = $_POST['email'];
-      echo "Welcome $name <br />";
-      echo "You are $age years old,";
-      echo "your email  $email";
-      
+      $onderwerp = $_POST["onderwerp"];
+      $bericht = $_POST["bericht"];
+      echo "Hallo $voornaam ";
+      echo " $achternaam <br />";
+      echo "We helpen je zo snel mogelijk met de email die je hebt verstuurd via $email";
+      echo " over het onderwerp $onderwerp";
       exit();
    }
 ?>
@@ -35,12 +39,23 @@
   </div>
 </div>
 
-<form action = "<?php $_PHP_SELF ?>" method = "POST">
-    Name: <input type = "text" name = "name" />
-    Age: <input type = "text" name = "age" required />
-    Email: <input type = "text" name = "email" />
-  <input type = "submit" />
-</form>
+<div class="contact">
+ <div class="container">
+    <table>
+      <form action = "<?php $_PHP_SELF ?>" method = "POST">
+       <tr><td> Voornaam: <input type = "text" name = "voornaam" required  /> </td></tr>
+       <tr><td> Achternaam: <input type = "text" name = "achternaam" required /> </td></tr>
+       <tr><td> Email: <input type = "text" name = "email" required /> </td></tr>
+       <tr><td> Onderwerp: <input type = "text" name = "onderwerp" required/> </td></tr>
+       <tr><td> Bericht: <input type = "text" name = "bericht" required/> </td></tr>
+       <tr><td> <input type = "submit" /> </td></tr>
+
+      </form>
+   </table>
+ </div>
+</div>
+
+
 
 
 
