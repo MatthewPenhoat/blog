@@ -15,11 +15,12 @@
       $email = $_POST['email'];
       $onderwerp = $_POST["onderwerp"];
       $bericht = $_POST["bericht"];
-      echo "Hallo $voornaam ";
-      echo " $achternaam <br />";
-      echo "We helpen je zo snel mogelijk met de email die je hebt verstuurd via $email";
-      echo " over het onderwerp $onderwerp";
-      exit();
+
+      $resultaat = "Hallo $voornaam ";
+      $resultaat .= " $achternaam <br />";
+      $resultaat .= "We helpen je zo snel mogelijk met de email die je hebt verstuurd via $email";
+      $resultaat .= " over het onderwerp $onderwerp";
+      
    }
 ?>
 
@@ -40,19 +41,24 @@
 </div>
 
 <div class="contact">
- <div class="container">
-    <table>
-      <form action = "<?php $_PHP_SELF ?>" method = "POST">
-       <tr><td> Voornaam: <input type = "text" name = "voornaam" required  /> </td></tr>
-       <tr><td> Achternaam: <input type = "text" name = "achternaam" required /> </td></tr>
-       <tr><td> Email: <input type = "text" name = "email" required /> </td></tr>
-       <tr><td> Onderwerp: <input type = "text" name = "onderwerp" required/> </td></tr>
-       <tr><td> Bericht: <textarea  name = "bericht" required></textarea></td></tr>
-       <tr><td> <input type = "submit" /> </td></tr>
+  <div class="container">
 
-      </form>
-   </table>
- </div>
+    <?php 
+    if(isset($resultaat)) {
+      echo $resultaat; 
+    }
+    ?>
+    <form action = "<?php $_PHP_SELF ?>" method = "POST">
+      <table>
+        <tr><td> Voornaam: <input type = "text" name = "voornaam" required  /> </td></tr>
+        <tr><td> Achternaam: <input type = "text" name = "achternaam" required /> </td></tr>
+        <tr><td> Email: <input type = "text" name = "email" required /> </td></tr>
+        <tr><td> Onderwerp: <input type = "text" name = "onderwerp" required/> </td></tr>
+        <tr><td> Bericht: <textarea  name = "bericht" required></textarea></td></tr>
+        <tr><td> <input type = "submit" /> </td></tr>
+      </table>
+    </form>
+  </div>
 </div>
 
 
