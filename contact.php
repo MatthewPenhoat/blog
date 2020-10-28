@@ -47,7 +47,7 @@
        <tr><td> Achternaam: <input type = "text" name = "achternaam" required /> </td></tr>
        <tr><td> Email: <input type = "text" name = "email" required /> </td></tr>
        <tr><td> Onderwerp: <input type = "text" name = "onderwerp" required/> </td></tr>
-       <tr><td> Bericht: <input type = "text" name = "bericht" required/> </td></tr>
+       <tr><td> Bericht: <textarea  name = "bericht" required></textarea></td></tr>
        <tr><td> <input type = "submit" /> </td></tr>
 
       </form>
