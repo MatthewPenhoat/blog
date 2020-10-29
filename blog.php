@@ -16,7 +16,7 @@
 
 <div class="header">
   <div class="container">
-    <h1>blog</h1>
+    <h1>Blog</h1>
   </div>
 </div>
 

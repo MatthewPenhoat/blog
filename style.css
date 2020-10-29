@@ -1,5 +1,16 @@
 body {
   margin: 0;
+  font-family:'Merriweather', serif;
+}
+
+h2, h3{
+
+  font-family: 'Merriweather', serif;
+}
+
+h1{
+  font-family: 'Bungee Shade', cursive;
+
 }
 
 .container {
@@ -15,19 +26,21 @@ body {
 }
 
 .header {
-  background-color: bisque;
+  background-color: white;
   background-position:center;
-  background-image: url(duskbanner.png);
+  background-image: url(nDuvAM.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   height: 350px;
+  font-size: 50px;
 
 }
 
 .header h1 {
   text-align: center;
   margin-top: 0;
-  padding-top: 150px;
+  padding-top: 100px;
+  
 }
 
 .navigation {
@@ -58,6 +71,7 @@ body {
 
 .footer {
   background-color: black;
+ 
 }
 
 .footer p, 
@@ -114,5 +128,7 @@ input{
 textarea{
   width: 185px;
   resize: vertical;
+  max-height: 309px;
+
 }
 

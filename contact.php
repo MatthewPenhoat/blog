@@ -19,7 +19,7 @@
       $resultaat = "Hallo $voornaam ";
       $resultaat .= " $achternaam <br />";
       $resultaat .= "We helpen je zo snel mogelijk met de email die je hebt verstuurd via $email";
-      $resultaat .= " over het onderwerp $onderwerp";
+      $resultaat .= " over het onderwerp $onderwerp.";
       
    }
 ?>
@@ -43,11 +43,7 @@
 <div class="contact">
   <div class="container">
 
-    <?php 
-    if(isset($resultaat)) {
-      echo $resultaat; 
-    }
-    ?>
+    
     <form action = "<?php $_PHP_SELF ?>" method = "POST">
       <table>
         <tr><td> Voornaam: <input type = "text" name = "voornaam" required  /> </td></tr>
@@ -58,6 +54,13 @@
         <tr><td> <input type = "submit" /> </td></tr>
       </table>
     </form>
+
+    <?php 
+    if(isset($resultaat)) {
+      echo $resultaat; 
+    }
+    ?>
+
   </div>
 </div>
 
