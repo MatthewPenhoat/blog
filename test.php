@@ -1,19 +1,15 @@
 <?php
 
-$posts = [
-  [
-    "titel" => "Mijn titel1", 
-    "inhoud" => "Mijn inhoud",
-  ],
-  [
-    "titel" => "Mijn titel2 ", 
-    "inhoud" => "Mijn inhoud",
-  ],
-  [
-    "titel" => "Mijn titel3", 
-    "inhoud" => "Mijn inhoud",
-  ]
-];
+$host = "127.0.0.1";
+$user = "root";
+$password = "";
+$database = "blog";
+
+$verbinding = mysqli_connect($host, $user, $password, $database);
+
+$result = mysqli_query($verbinding, "select * from posts");
+$posts = $result->fetch_all(MYSQLI_ASSOC);
+
 
 foreach ($posts as $key => $post):
   $titel = $post["titel"];
@@ -21,7 +17,7 @@ foreach ($posts as $key => $post):
 ?>
 
   <div class="blog-post">
-    <h3 class="post-title"><?php echo $titel; ?></h3>
+    <h3 class="post-titel"><?php echo $titel; ?></h3>
     <p class="post-content"><?php echo $inhoud; ?></p>
   </div>
 
