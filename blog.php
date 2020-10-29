@@ -8,10 +8,10 @@
 
   $verbinding = mysqli_connect($host, $user, $password, $database);
 
-  $result = mysqli_query($verbinding, "select * from posts");
-  $items = $result->fetch_all(MYSQLI_ASSOC);
+  $result = mysqli_query($verbinding, "SELECT * FROM posts ");
+  $posts = $result->fetch_all(MYSQLI_ASSOC);
 
-  var_dump($items);
+
 ?>
 
 <div class="header">
@@ -30,27 +30,28 @@
   </div>
 </div>
 
+
+
 <div class="content">
   <div class="container">
     <h2>Blog posts</h2>
-    <div class="blog-post">
-      <h3 class="post-titel">Post 1</h3>
-      <p class="post-content">Post content 1</p>
-    </div>
-    <div class="blog-post">
-      <h3 class="post-titel">Post 2</h3>
-      <p class="post-content">Post content 2</p>
-    </div>
-    <div class="blog-post">
-      <h3 class="post-titel">Post 3</h3>
-      <p class="post-content">Post content 3</p>
-    </div>
+
+
+    <?php 
+      foreach ($posts as $key => $post):
+        $titel = $post["titel"];
+        $inhoud = $post["inhoud"];
+    ?> 
+
+        <div class="blog-post">
+          <h3 class="post-titel"><?php echo $titel; ?></h3>
+          <p class="post-content"><?php echo $inhoud; ?></p>
+        </div>
+
+    <?php 
+      endforeach;
+    ?>
   </div>
 </div>
-
-
-
-
-
 
 

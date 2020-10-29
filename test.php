@@ -7,8 +7,9 @@ $database = "blog";
 
 $verbinding = mysqli_connect($host, $user, $password, $database);
 
-$result = mysqli_query($verbinding, "select * from posts");
+$result = mysqli_query($verbinding, "SELECT * FROM posts");
 $posts = $result->fetch_all(MYSQLI_ASSOC);
+
 
 
 foreach ($posts as $key => $post):
