@@ -37,7 +37,7 @@
 </div>
 
 <?php
-  include "includes/navigation.php";
+  include "include/navigation.php";
 ?>
 
 <div class="contact">
