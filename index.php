@@ -2,17 +2,9 @@
 <?php
   include "include/header.php";
 
-  $host = "127.0.0.1";
-  $user = "root";
-  $password = "";
-  $database = "blog";
+  include "database/connection.php";
 
-  $verbinding = mysqli_connect($host, $user, $password, $database);
-
-  $result = mysqli_query($verbinding, "SELECT * FROM posts LIMIT 3");
-  $posts = $result->fetch_all(MYSQLI_ASSOC);
-
-
+  include "database/last-posts.php";
 ?>
 
 <div class="header">
@@ -21,17 +13,9 @@
   </div>
 </div>
 
-<div class="navigation">
-  <div class="container">
-    <a href="/">Home</a>
-    <a href="/blog.php">Blog</a>
-    <a href="/about.php">Over Mij</a>
-    <a href="/contact.php">Contact</a>
-    <div class="clearfix"></div>
-  </div>
-</div>
-
-
+<?php
+  include "includes/navigation.php";
+?>
 
 <div class="content">
   <div class="container">

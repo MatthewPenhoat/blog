@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
   <title>Document</title>
-  <link rel="stylesheet" href="/style.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="/assets/style.css?v=<?php echo time(); ?>">
 </head>
 <body>
 

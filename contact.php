@@ -1,24 +1,30 @@
 <?php
     include "include/header.php";
-    
 
-   if( isset($_POST["name"]) || isset($_POST["voornaam"]) ) {
-      if (preg_match("/[^A-Za-z'-]/",$_POST['achternaam'] )) {
-         if( isset($_Post["email"]) || isset($_Post["email"]))
-         if( isset($_Post["onderwerp"]) || isset($_Post["onderwerp"]))
-         if( isset($_Post["bericht"]) || isset($_Post["bericht"]))
-         die ("invalid name and name should be alpha");
-   
-      }
+    if(isset($_POST['voornaam']))
+    if(isset($_POST['achternaam']))
+    if(isset($_POST['email']))
+    if(isset($_POST['onderwerp']))
+    if(isset($_POST['bericht']))
+    {
+
       $voornaam = $_POST['voornaam'];
       $achternaam = $_POST['achternaam'];
       $email = $_POST['email'];
-      $onderwerp = $_POST["onderwerp"];
-      $bericht = $_POST["bericht"];
+      $onderwerp = $_POST['onderwerp'];
+      $bericht = $_POST['bericht'];
 
+       
+      $to = 'matthewpenhoat@outlook.com';
+      $email = "From: $to" . "\r\n" .
+      "Reply-To: $email" . "\r\n" .
+      "X-Mailer: PHP/" . phpversion();
+
+      mail($to, $onderwerp, $bericht, $email);
+      
       $resultaat = "Hallo $voornaam ";
       $resultaat .= " $achternaam <br />";
-      $resultaat .= "We helpen je zo snel mogelijk met de email die je hebt verstuurd via $email";
+      $resultaat .= "We helpen je zo snel mogelijk met de email die je hebt verstuurd";
       $resultaat .= " over het onderwerp $onderwerp.";
       
    }
@@ -30,15 +36,9 @@
   </div>
 </div>
 
-<div class="navigation">
-  <div class="container">
-    <a href="/">Home</a>
-    <a href="/blog.php">Blog</a>
-    <a href="/about.php">Over mij</a>
-    <a href="/contact.php">Contact</a>
-    <div class="clearfix"></div>
-  </div>
-</div>
+<?php
+  include "includes/navigation.php";
+?>
 
 <div class="contact">
   <div class="container">
