@@ -16,7 +16,7 @@
 
        
       $to = 'matthewpenhoat@outlook.com';
-      $email = "From: $to" . "\r\n" .
+      $email = "From: matthew@server7.omega2.nl" . "\r\n" .
       "Reply-To: $email" . "\r\n" .
       "X-Mailer: PHP/" . phpversion();
 
